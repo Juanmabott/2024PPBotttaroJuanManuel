@@ -22,14 +22,14 @@
         <div id="column-visibility">
             <h3>Seleccionar Columnas a Mostrar:</h3>
             <label><input type="checkbox" value="id" checked> ID</label>
-            <label><input type="checkbox" value="modelo" checked> modelo</label>
-            <label><input type="checkbox" value="AnioFab" checked> Año fab</label>
-            <label><input type="checkbox" value="velMax" checked> vel max</label>
-            <label><input type="checkbox" value="altMax" checked> alt max</label>
-            <label><input type="checkbox" value="autonomia" checked> autonomia</label>
+            <label><input type="checkbox" value="modelo" checked> Modelo</label>
+            <label><input type="checkbox" value="AnioFab" checked> Año fabriación</label>
+            <label><input type="checkbox" value="velMax" checked> Vel max</label>
+            <label><input type="checkbox" value="altMax" checked> Alt max</label>
+            <label><input type="checkbox" value="autonomia" checked> Autonomia</label>
 
-            <label><input type="checkbox" value="cantPue" checked> cant pue</label>
-            <label><input type="checkbox" value="cantRue" checked> cant rue</label>
+            <label><input type="checkbox" value="cantPue" checked> Cant puertas</label>
+            <label><input type="checkbox" value="cantRue" checked> Cant ruedas</label>
 
         </div>
 
@@ -38,13 +38,13 @@
                 <tr>
                     <th><button id="id" class="ordenar">ID</button></th>
                     <th><button id="modelo" class="ordenar">modelo</button></th>
-                    <th><button id="AnioFab" class="ordenar">Año fab</button></th>
-                    <th><button id="velMax" class="ordenar">vel max</button></th>
-                    <th><button id="altMax" class="ordenar">alt max</button></th>
-                    <th><button id="autonomia" class="ordenar">autonomia</button></th>
+                    <th><button id="AnioFab" class="ordenar">Año fabriación</button></th>
+                    <th><button id="velMax" class="ordenar">Velocidad maxima</button></th>
+                    <th><button id="altMax" class="ordenar">Altura maxima</button></th>
+                    <th><button id="autonomia" class="ordenar">Autonomia</button></th>
 
-                    <th><button id="cantPue" class="ordenar">cant pue</button></th>
-                    <th><button id="compras" class="ordenar">cant rue</button></th>
+                    <th><button id="cantPue" class="ordenar">Cantidad puertas</button></th>
+                    <th><button id="compras" class="ordenar">Cantidad ruedas</button></th>
                 </tr>
             </thead>
             <tbody>
@@ -54,7 +54,7 @@
 
         <button id="calcular">Calcular vel max Promedio</button>
         <p id="velMax-promedio">vel max promedio: </p>
-        <button id="agregar">Agregar Persona</button>
+        <button id="agregar">Agregar</button>
     </div>
 
     <!-- Formulario ABM -->
@@ -71,18 +71,18 @@
             <label>ID:</label>
             <input type="text" id="idABM" disabled>
             
-            <label>modelo:</label>
+            <label>Modelo:</label>
             <input type="text" id="modeloABM" required>
             
-            <label>Año fab:</label>
+            <label>Año fabriación:</label>
             <input type="text" id="anioFabABM" required>
             
-            <label>vel max:</label>
+            <label>Velocidad max:</label>
             <input type="number" id="velMaxABM" required>
             
             <!-- Campos específicos para terrestre y aereo -->
             <div id="aereo-fields">
-                <label>alt max:</label>
+                <label>Altura maxima:</label>
                 <input type="number" id="altMaxABM">
                 <label>autonomia:</label>
                 <input type="number" id="autonomiaABM">
@@ -91,9 +91,9 @@
             </div>
             
             <div id="terrestre-fields"">
-                <label>cant rue:</label>
+                <label>Cant ruedas:</label>
                 <input type="number" id="cantRueABM">
-                <label>cant pue:</label>
+                <label>Cantidad puertas:</label>
                 <input type="number" id="cantPueABM">
                 
         
