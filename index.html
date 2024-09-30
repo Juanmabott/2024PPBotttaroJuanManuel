@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABM Personas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>ABM de Personas</h1>
+
+    <!-- Formulario de Datos -->
+    <div id="form-datos">
+        <h2>Lista de Personas</h2>
+        <select id="filtro">
+            <option value="todos">Todos</option>
+            <option value="terrestre">Terrestre</option>
+            <option value="aereo">Aereo</option>
+        </select>
+
+        <div id="column-visibility">
+            <h3>Seleccionar Columnas a Mostrar:</h3>
+            <label><input type="checkbox" value="id" checked> ID</label>
+            <label><input type="checkbox" value="modelo" checked> modelo</label>
+            <label><input type="checkbox" value="AnioFab" checked> Año fab</label>
+            <label><input type="checkbox" value="velMax" checked> vel max</label>
+            <label><input type="checkbox" value="altMax" checked> alt max</label>
+            <label><input type="checkbox" value="autonomia" checked> autonomia</label>
+
+            <label><input type="checkbox" value="cantPue" checked> cant pue</label>
+            <label><input type="checkbox" value="cantRue" checked> cant rue</label>
+
+        </div>
+
+        <table id="tabla-vehiculos">
+            <thead>
+                <tr>
+                    <th><button id="id" class="ordenar">ID</button></th>
+                    <th><button id="modelo" class="ordenar">modelo</button></th>
+                    <th><button id="AnioFab" class="ordenar">Año fab</button></th>
+                    <th><button id="velMax" class="ordenar">vel max</button></th>
+                    <th><button id="altMax" class="ordenar">alt max</button></th>
+                    <th><button id="autonomia" class="ordenar">autonomia</button></th>
+
+                    <th><button id="cantPue" class="ordenar">cant pue</button></th>
+                    <th><button id="compras" class="ordenar">cant rue</button></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas se llenan dinámicamente -->
+            </tbody>
+        </table>
+
+        <button id="calcular">Calcular vel max Promedio</button>
+        <p id="velMax-promedio">vel max promedio: </p>
+        <button id="agregar">Agregar Persona</button>
+    </div>
+
+    <!-- Formulario ABM -->
+    <div id="form-abm" style="display: none;">
+        <h2>Formulario ABM</h2>
+
+        <select id="filtroABM">
+            <option value="todos">Todos</option>
+            <option value="terrestre">terrestre</option>
+            <option value="aereo">aereo</option>
+        </select>
+
+        <form id="abm-form">
+            <label>ID:</label>
+            <input type="text" id="idABM" disabled>
+            
+            <label>modelo:</label>
+            <input type="text" id="modeloABM" required>
+            
+            <label>Año fab:</label>
+            <input type="text" id="anioFabABM" required>
+            
+            <label>vel max:</label>
+            <input type="number" id="velMaxABM" required>
+            
+            <!-- Campos específicos para terrestre y aereo -->
+            <div id="aereo-fields">
+                <label>alt max:</label>
+                <input type="number" id="altMaxABM">
+                <label>autonomia:</label>
+                <input type="number" id="autonomiaABM">
+                
+               
+            </div>
+            
+            <div id="terrestre-fields"">
+                <label>cant rue:</label>
+                <input type="number" id="cantRueABM">
+                <label>cant pue:</label>
+                <input type="number" id="cantPueABM">
+                
+        
+            </div>
+        
+            <button id="guardar" type="submit">Guardar</button>
+            <button id="cancelar" type="button">Cancelar</button>
+        </form>
+    </div>
+
+    <script src="clases.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
